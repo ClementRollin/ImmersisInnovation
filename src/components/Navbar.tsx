@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <View style={styles.navbar}>
             <Image
-                source={require('../../assets/logo.png')} // Assurez-vous que le chemin est correct
+                source={require('../../assets/logoUma.png')} // Assurez-vous que le chemin est correct
                 style={styles.logo}
             />
         </View>
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         zIndex: 1, // Assure que la navbar est au-dessus des autres éléments
-        backgroundColor: '#fff' // Si nécessaire, ajouter une couleur de fond
+        backgroundColor: '#000' // Si nécessaire, ajouter une couleur de fond
     },
     logo: {
         marginTop: 50,
