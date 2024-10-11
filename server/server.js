@@ -8,7 +8,6 @@ wss.on('connection', function connection(ws) {
     console.log('Un appareil s\'est connecté');
 
     ws.on('message', function incoming(message) {
-        console.log('Message reçu:', message);
 
         let data;
         try {
@@ -22,7 +21,6 @@ wss.on('connection', function connection(ws) {
             console.log('Lancement de la vidéo:', data.videoPath);
 
             const videoPath = path.resolve('C:/MYDIGITALSCHOOL/1. Cours/2024-2025/COURS/Starter Pack - umabao.fr/App/immersis/immersis/assets/videos', data.videoPath);
-            console.log('Chemin absolu de la vidéo:', videoPath);
 
             ws.send(JSON.stringify({ action: 'video-started', video: data.videoPath }));
 
